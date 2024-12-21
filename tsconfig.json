@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "target": "es5",                          // 컴파일된 JavaScript의 목표 버전
+      "lib": ["dom", "dom.iterable", "esnext"], // 사용할 라이브러리
+      "allowJs": true,                          // JS 파일도 허용
+      "skipLibCheck": true,                     // 라이브러리 타입 체크 생략
+      "esModuleInterop": true,                  // ES6 모듈 방식 지원
+      "allowSyntheticDefaultImports": true,     // default import 허용
+      "strict": true,                           // 엄격한 타입 검사
+      "forceConsistentCasingInFileNames": true, // 파일 이름 대소문자 구분
+      "module": "esnext",                       // 모듈 시스템
+      "moduleResolution": "node",               // 모듈 해석 방식
+      "resolveJsonModule": true,                // JSON 파일 import 가능
+      "isolatedModules": true,                  // 각 파일을 독립적으로 트랜스파일
+      "noEmit": true,                           // 출력 파일 생성 안 함
+      "jsx": "react"                            // React JSX 지원
+    },
+    "include": ["src"],                         // 컴파일할 파일 경로
+    "exclude": ["node_modules"]                 // 제외할 디렉토리
+}  
