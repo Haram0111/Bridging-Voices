@@ -53,6 +53,12 @@ const VoicePage: React.FC = () => {
     window.speechSynthesis.speak(utterance);
   };
 
+  const handleAddTheme = (newTheme: string): void => {
+    if (!themes[newTheme]) {
+      themes[newTheme] = Array(16).fill('');
+    }
+  };
+
   return (
     <MainContainer>
       <LeftBox>
@@ -65,7 +71,12 @@ const VoicePage: React.FC = () => {
           onTextChange={handleTextChange}
           onButtonClick={handleButtonClick}
         />
-        <Footer currentTheme={currentTheme} onThemeChange={handleThemeChange} />
+        <Footer 
+          currentTheme={currentTheme} 
+          onThemeChange={handleThemeChange} 
+          onAddTheme={handleAddTheme}
+          themes={Object.keys(themes)} // 기존 테마의 키 값들을 전달
+        />
       </RightBox>
     </MainContainer>
   );
